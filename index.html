@@ -30,7 +30,7 @@
 
 <body>
     <header>
-        <div class="navbar bg-base-100 shadow-sm">
+        <div class="navbar bg-base-100 shadow-sm px-5">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -40,42 +40,70 @@
                                 d="M4 6h16M4 12h8m-8 6h16" />
                         </svg>
                     </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
+                    <ul tabindex="0" class=" menu menu-sm dropdown-content bg-base-100 rounded-box z-1 w-5 shadow">
+                        <li class="">
+                            <a href="#"><i class="fa-solid fa-question"></i>FAQ</a>
                         </li>
-                        <li><a>Item 3</a></li>
+                        <li class="">
+                            <a href="#"><i class="fa-solid fa-book-open"></i> Learn</a>
+                        </li>
+                        <li class=" ">
+                            <a href="#"> <i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                        </li>
                     </ul>
                 </div>
-                <a class="btn btn-ghost text-xl">daisyUI</a>
+                <a href="#" class="flex  items-center gap-1">
+                    <span class="text-lg font-bold">English</span>
+                    <img src="./assets/logo.png" alt="">
+                    <span class="font-bangla text-lg">জানালা</span>
+                </a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1">
-                    <li><a>Item 1</a></li>
-                    <li>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </details>
+            <div class="navbar-end hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-[#422AD5] font-bold">
+                    <li
+                        class="border border-[#422AD5] rounded-lg  hover:bg-[#422AD5] hover:text-white transition-all duration-200">
+                        <a href="#"><i class="fa-solid fa-question"></i>FAQ</a>
                     </li>
-                    <li><a>Item 3</a></li>
+                    <li
+                        class="border border-[#422AD5] rounded-lg hover:bg-[#422AD5] hover:text-white transition-all duration-200 mx-3">
+                        <a href="#"><i class="fa-solid fa-book-open"></i> Learn</a>
+                    </li>
+                    <li
+                        class="border border-[#422AD5] rounded-lg hover:bg-[#422AD5] hover:text-white transition-all duration-200 ">
+                        <a href="#"> <i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                    </li>
                 </ul>
-            </div>
-            <div class="navbar-end">
-                <a class="btn">Button</a>
             </div>
         </div>
     </header>
 
+    <section
+        class="flex items-center flex-col-reverse md:justify-between lg:justify-between md:flex-row py-5 w-11/12 mx-auto">
+        <div class="content flex-1 text-center md:text-left lg:text-left">
+            <h2 class="text-4xl font-bold font-urbanist mb-8"><span class=" text-[#00BCFF]">English</span> is Easy</h2>
+            <p>আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের
+                Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+            <form>
+                <input class="p-3 w-full md:w-3/4 md:block mt-6 rounded-lg " type="text" placeholder="Enter Your Name">
+                <input class="p-3 w-full md:w-3/4 flex justify-start rounded-lg mt-5 " type="password"
+                    placeholder="Enter Your Password"><br>
+                <button class="btn btn-primary text-left text-lg px-10 py-6">Get Start</button>
+            </form>
+        </div>
+        <div class="image flex-1">
+            <img src="./assets/hero-student.png" alt="">
+        </div>
+    </section>
+
+
+    <section class="w-11/12 mx-auto">
+        <h2 class="font-bold text-2xl text-center"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+        </h2>
+        <div id="lesson-container" class="flex justify-center gap-2 my-8">
+        </div>
+    </section>
+
+    <script src="./src/script.js"></script>
 </body>
 
 </html>
