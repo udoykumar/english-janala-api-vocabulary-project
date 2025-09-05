@@ -45,7 +45,7 @@
                             <a href="#"><i class="fa-solid fa-question"></i>FAQ</a>
                         </li>
                         <li class="">
-                            <a href="#"><i class="fa-solid fa-book-open"></i> Learn</a>
+                            <a href="#learn-section"><i class="fa-solid fa-book-open"></i> Learn</a>
                         </li>
                         <li class=" ">
                             <a href="#"> <i class="fa-solid fa-right-from-bracket"></i>Logout</a>
@@ -96,11 +96,22 @@
     </section>
 
 
-    <section class="w-11/12 mx-auto">
+    <section id="learn-section" class="w-11/12 mx-auto">
         <h2 class="font-bold text-2xl text-center"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
         </h2>
         <div id="lesson-container" class="flex justify-center flex-wrap gap-2 my-8">
         </div>
+    </section>
+    <!-- search section  -->
+    <section class="flex justify-center mt-7">
+        <div class="">
+            <input id="input-search" class="p-3 " type="text" placeholder="Search Vocabulary">
+            <button id="btn-search" class=" py-3 px-4 rounded-md bg-[#422AD5] text-white">search</button>
+        </div>
+    </section>
+
+    <section id="spinner" class="flex justify-center items-center py-10 hidden">
+        <progress class="progress w-56"></progress>
     </section>
 
     <section id="word-container"
@@ -114,6 +125,20 @@
         </div>
 
     </section>
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="details-container" class="space-y-5">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 
     <script src="./src/script.js"></script>
 </body>
