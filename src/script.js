@@ -7,7 +7,7 @@ const createElements = (arr) => {
 
 function pronounceWord(word) {
   const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "en-EN"; // English
+  utterance.lang = "en-EN";
   window.speechSynthesis.speak(utterance);
 }
 
@@ -93,7 +93,6 @@ const displayLavelWord = (words) => {
     `;
   }
   words.forEach((word) => {
-    // console.log(word);
     const card = document.createElement("div");
     card.innerHTML = `
         <div class="bg-white flex flex-col rounded-xl shadow-lg shadow-[1px 1px 1px black] text-center py-8 px-3">
@@ -125,7 +124,6 @@ const displayLavelWord = (words) => {
 };
 
 const displayLesson = (lessons) => {
-  // console.log(lessons);
   const lessonContainer = document.getElementById("lesson-container");
   lessonContainer.innerHTML = "";
   lessons.forEach((lessonValue) => {
@@ -148,7 +146,6 @@ document.getElementById("btn-search").addEventListener("click", () => {
     .then((res) => res.json())
     .then((data) => {
       const allWords = data.data;
-      // console.log(allWords);
       const filterWords = allWords.filter((word) =>
         word.word.toLowerCase().includes(searchValue)
       );
